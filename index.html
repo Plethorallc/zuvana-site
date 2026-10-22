@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZUVANA — Send money home by text · Coming soon</title>
+<meta name="description" content="Coming soon: send money home with a text message. Flat $1.99 fee at the real exchange rate. Join the waitlist.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://zuvana.app/">
+<meta name="theme-color" content="#0E7C66">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zuvana.app/">
+<meta property="og:site_name" content="ZUVANA">
+<meta property="og:image" content="https://zuvana.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="es_MX">
+<meta name="twitter:card" content="summary_large_image">
+<meta property="og:title" content="ZUVANA — Send money home by text (coming soon)">
+<meta property="og:description" content="Text 'send $50 to Mom'. Flat $1.99. Join the waitlist.">
+<script>
+/* ================= CONFIG — EDIT BEFORE LAUNCH =================
+   FORM_ACTION: where waitlist signups POST. PLACEHOLDER until an account exists.
+   - Google Forms: "https://docs.google.com/forms/d/e/<FORM_ID>/formResponse"
+       and set FIELD_* to the "entry.123456" names from the form's pre-filled link.
+   - Formspree:    "https://formspree.io/f/<FORM_ID>" (keep FIELD_* as plain names).
+   While FORM_ACTION contains "PLACEHOLDER", the form falls back to mailto:.        */
+const FORM_ACTION   = "https://PLACEHOLDER.example/REPLACE_WITH_FORM_ENDPOINT";
+const FIELD_CONTACT = "contact";   // e.g. "entry.1111111111" for Google Forms
+const FIELD_LANG    = "language";  // e.g. "entry.3333333333"
+const MAILTO_FALLBACK = "waitlist@zuvana.app"; // must be a mailbox you can read
+/* ============================================================== */
+</script>
+<style>
+:root{--g:#0E7C66;--g2:#0a5c4c;--y:#FFB547;--ink:#14231f;--mut:#5b6b66;--bg:#f6faf8}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"PingFang SC","Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg);line-height:1.5;font-size:18px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:22px;letter-spacing:.06em}.brand img{width:36px;height:36px}
+.toggle{display:flex;border:2px solid var(--g);border-radius:999px;overflow:hidden}
+.toggle button{border:0;background:#fff;color:var(--g);font:inherit;font-size:15px;font-weight:700;padding:8px 14px;cursor:pointer;min-height:44px}
+.toggle button[aria-pressed=true]{background:var(--g);color:#fff}
+.hero{display:grid;gap:28px;padding:16px 0 36px}
+.badge{display:inline-block;background:#fff3dc;color:#8a5a00;font-weight:700;font-size:14px;padding:6px 12px;border-radius:999px}
+h1{font-size:clamp(40px,9vw,68px);line-height:1.02;letter-spacing:-.03em;font-weight:900;margin:14px 0 12px}
+.lead{font-size:20px;color:var(--mut);margin:0 0 20px}
+.zh{font-size:16px;color:var(--mut);margin:-8px 0 20px}
+form{background:#fff;border-radius:22px;padding:14px;box-shadow:0 10px 40px rgba(14,124,102,.14);display:grid;gap:10px}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}@media(min-width:560px){form{grid-template-columns:1fr auto}form .small,form .err{color:#b3261e;font-weight:700;font-size:15px;margin:0;grid-column:1/-1}.err:empty{display:none}input[aria-invalid=true]{border-color:#b3261e}.ok{grid-column:1/-1}}
+label{font-weight:700;font-size:15px}
+input,select{width:100%;font:inherit;padding:14px;border:2px solid #cfe0da;border-radius:12px;min-height:52px}
+input:focus,select:focus{outline:3px solid var(--y);border-color:var(--g)}
+.cta{padding:16px 26px!important;background:var(--g);color:#fff;border:0;border-radius:12px;font:inherit;font-weight:800;font-size:19px;padding:16px;cursor:pointer;min-height:56px}
+.cta:hover{background:var(--g2)}
+.small{font-size:13px;color:var(--mut);margin:0}
+.err{color:#b3261e;font-weight:700;font-size:15px;margin:0;grid-column:1/-1}.err:empty{display:none}input[aria-invalid=true]{border-color:#b3261e}.ok{background:#e4f6ef;color:var(--g2);padding:14px;border-radius:12px;font-weight:700;display:none}
+.phone{background:#fff;border-radius:28px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,.08);max-width:360px;justify-self:center;width:100%}
+.bub{padding:12px 16px;border-radius:18px;margin:10px 0;max-width:85%;font-size:17px}
+.me{background:var(--g);color:#fff;margin-left:auto;border-bottom-right-radius:4px}
+.them{background:#eef2f1;border-bottom-left-radius:4px}
+.link{color:var(--g);font-weight:700;text-decoration:underline}
+section{padding:44px 0}h2{font-size:28px;margin:0 0 16px}
+.steps{display:grid;gap:14px;padding:0;margin:0;list-style:none;counter-reset:s}
+.steps li{background:#fff;border-radius:16px;padding:18px 18px 18px 64px;position:relative}
+.steps li::before{content:attr(data-ic);font-size:22px;width:40px!important;height:40px!important;background:#e4f6ef!important;position:absolute;left:18px;top:16px;width:34px;height:34px;border-radius:50%;background:var(--y);font-weight:800;display:grid;place-items:center}
+.cards{display:grid;gap:14px}.card{background:#fff;border-radius:16px;padding:18px}.card b{display:block;font-size:20px;margin-bottom:4px}
+.big{font-size:40px;font-weight:800;color:var(--g)}
+footer{padding:28px 0 40px;font-size:13px;color:var(--mut);border-top:1px solid #dfe9e5;margin-top:20px}
+@media(min-width:820px){.hero{grid-template-columns:1.1fr .9fr;align-items:center;padding:40px 0 56px}.steps,.cards{grid-template-columns:repeat(3,1fr)}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand"><img src="logo.svg" alt="">ZUVANA</div>
+  <div class="toggle" role="group" aria-label="Language / Idioma">
+    <button type="button" data-set="en" aria-pressed="true">EN</button>
+    <button type="button" data-set="es" aria-pressed="false">ES</button>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div>
+    <span class="badge" data-i="badge">Coming soon</span>
+    <h1 data-i="h1">Send money home with a text.</h1>
+    <p class="lead" data-i="lead">Just type “send $50 to Mom” in WhatsApp, iMessage or SMS. She taps a link and picks up the cash. Flat $1.99 fee, real exchange rate.</p>
+    <p class="zh" lang="zh-Hans">即将推出：发一条短信，就能给家人汇款。欢迎加入候补名单。</p>
+
+    <form id="wl" novalidate action="#" method="post">
+      <label for="contact" class="sr" data-i="lbl">Your phone or email</label>
+      <input id="contact" name="contact" type="text" required aria-describedby="err" aria-invalid="false" autocomplete="email" inputmode="email" placeholder="Phone or email" data-ph="ph">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
+      <p class="err" id="err" role="alert"></p>
+      <button class="cta" type="submit" data-i="cta">Join the waitlist</button>
+      <p class="ok" id="ok" role="status"></p>
+      <p class="small" data-i="priv">No spam. We'll only contact you about launch. Free to join.</p>
+    </form>
+  </div>
+
+  <div class="phone" aria-hidden="true">
+    <div class="bub me" data-i="b1">send $50 to Mom</div>
+    <div class="bub them" data-i="b2">Got it. Fee: $1.99. Mom gets a link to pick up her money. Confirm?</div>
+    <div class="bub me" data-i="b3">Yes ✅</div>
+    <div class="bub them"><span data-i="b4">Mom's link:</span> <span class="link">zuvana.app/r/…</span></div>
+  </div>
+</div>
+
+<section>
+  <h2 data-i="how">How it will work</h2>
+  <ol class="steps">
+    <li data-ic="💬" data-i="s1">Text who and how much — like “send $50 to Mom”.</li>
+    <li data-ic="✅" data-i="s2">Confirm the $1.99 fee. No surprises.</li>
+    <li data-ic="💵" data-i="s3">Your family taps the link and picks up the money.</li>
+  </ol>
+</section>
+
+<section>
+  <h2 data-i="why">Why ZUVANA</h2>
+  <div class="cards">
+    <div class="card"><span class="big">$1.99</span><b data-i="c1t">One flat fee</b><span data-i="c1">Same small fee for every transfer.</span></div>
+    <div class="card"><span class="big">=</span><b data-i="c2t">Real exchange rate</b><span data-i="c2">No hidden markup on the rate.</span></div>
+    <div class="card"><span class="big">💬</span><b data-i="c3t">No new app to learn</b><span data-i="c3">Use the chat apps you already have.</span></div>
+  </div>
+</section>
+
+<section>
+  <h2 data-i="where">Where first</h2>
+  <p data-i="w1">🇺🇸 → 🇲🇽 We plan to start with the U.S. to Mexico. China is planned next, through licensed partners.</p>
+</section>
+</main>
+
+<footer>
+  <p data-i="disc">ZUVANA is not available yet. This page is a waitlist only — no money can be sent today. Features, fees, countries and launch dates are planned and may change, and will depend on regulatory approvals and partner agreements.</p>
+  <p>© 2026 BlockPay LLC · zuvana.app</p>
+</footer>
+</div>
+
+<script>
+const T={es:{badge:"Muy pronto",h1:"Envía dinero a casa con un mensaje.",lead:"Solo escribe “envía $50 a mamá” en WhatsApp, iMessage o SMS. Ella toca un enlace y recoge el dinero. Comisión fija de $1.99, al tipo de cambio real.",lbl:"Tu teléfono o correo",ph:"Teléfono o correo",lblc:"¿A dónde envías dinero?",mx:"México",cn:"China",ot:"Otro país",cta:"Unirme a la lista",ok:"¡Gracias! Ya estás en la lista. Te avisaremos cuando abramos.",okm:"Se abrió tu app de correo. Toca Enviar para unirte a la lista.",e1:"Escribe tu teléfono o correo.",e2:"Revisa: escribe un correo válido o un teléfono con al menos 10 dígitos.",priv:"Sin spam. Solo te contactaremos sobre el lanzamiento. Es gratis.",b1:"envía $50 a mamá",b2:"Listo. Comisión: $1.99. Mamá recibe un enlace para recoger su dinero. ¿Confirmas?",b3:"Sí ✅",b4:"Enlace de mamá:",how:"Cómo funcionará",s1:"Escribe a quién y cuánto — como “envía $50 a mamá”.",s2:"Confirma la comisión de $1.99. Sin sorpresas.",s3:"Tu familia toca el enlace y recoge el dinero.",why:"Por qué ZUVANA",c1t:"Una sola comisión",c1:"La misma comisión pequeña en cada envío.",c2t:"Tipo de cambio real",c2:"Sin margen escondido en el tipo de cambio.",c3t:"Sin apps nuevas",c3:"Usa los chats que ya tienes.",where:"Primero a dónde",w1:"🇺🇸 → 🇲🇽 Planeamos empezar de EE. UU. a México. China está planeada después, con socios autorizados.",disc:"ZUVANA aún no está disponible. Esta página es solo una lista de espera — hoy no se puede enviar dinero. Las funciones, comisiones, países y fechas son planes y pueden cambiar, y dependen de aprobaciones regulatorias y acuerdos con socios."}};
+const EN={ok:"Thanks! You're on the list. We'll text or email you when we open.",okm:"Your email app opened. Tap Send to join the list.",e1:"Please enter your phone or email.",e2:"Please check it: enter a valid email or a phone number with at least 10 digits."};document.querySelectorAll("[data-i]").forEach(e=>EN[e.dataset.i]=e.textContent);EN.ph=document.getElementById("contact").placeholder;T.en=EN;
+let lang="en";
+function setLang(l){lang=l;document.documentElement.lang=l;const d=T[l];
+ document.querySelectorAll("[data-i]").forEach(e=>{if(d[e.dataset.i])e.textContent=d[e.dataset.i]});
+ document.getElementById("contact").placeholder=d.ph;const er=document.getElementById("err");if(er&&er.dataset.k)er.textContent=d[er.dataset.k];const o=document.getElementById("ok");if(o&&o.dataset.k)o.textContent=d[o.dataset.k];
+ document.querySelectorAll(".toggle button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.set===l));
+ try{localStorage.setItem("zl",l)}catch(e){}}
+document.querySelectorAll(".toggle button").forEach(b=>b.onclick=()=>setLang(b.dataset.set));
+let saved=null;try{saved=localStorage.getItem("zl")}catch(e){}
+setLang(saved||((navigator.language||"").startsWith("es")?"es":"en"));
+
+const form=document.getElementById("wl"),inp=form.contact,err=document.getElementById("err"),ok=document.getElementById("ok");
+function bad(k){err.dataset.k=k;err.textContent=T[lang][k];inp.setAttribute("aria-invalid","true");inp.focus();return false}
+inp.addEventListener("input",()=>{err.textContent="";err.dataset.k="";inp.setAttribute("aria-invalid","false")});
+function valid(v){if(!v)return bad("e1");
+ if(/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v))return true;
+ if(/^[+\d\s().-]+$/.test(v)&&v.replace(/\D/g,"").length>=10)return true;return bad("e2")}
+function done(k){ok.dataset.k=k;ok.textContent=T[lang][k];ok.style.display="block";form.querySelector(".cta").disabled=true;inp.disabled=true}
+function mail(c){location.href="mailto:"+MAILTO_FALLBACK+"?subject="+encodeURIComponent("ZUVANA waitlist")+"&body="+encodeURIComponent("Contact: "+c+"\nLanguage: "+lang);done("okm")}
+form.addEventListener("submit",async ev=>{ev.preventDefault();
+ const c=inp.value.trim();
+ if(form._gotcha.value){done("ok");return} // bot: fake success, send nothing
+ if(!valid(c))return;
+ if(FORM_ACTION.includes("PLACEHOLDER")){mail(c);return}
+ const fd=new FormData();fd.append(FIELD_CONTACT,c);fd.append(FIELD_LANG,lang);
+ try{if(FORM_ACTION.includes("docs.google.com")){await fetch(FORM_ACTION,{method:"POST",mode:"no-cors",body:fd})}
+  else{const r=await fetch(FORM_ACTION,{method:"POST",body:fd,headers:{Accept:"application/json"}});if(!r.ok)throw 0}
+  done("ok")}catch(e){mail(c)}});
+</script>
+</body>
+</html>
