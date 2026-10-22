@@ -28,7 +28,7 @@
        and set FIELD_* to the "entry.123456" names from the form's pre-filled link.
    - Formspree:    "https://formspree.io/f/<FORM_ID>" (keep FIELD_* as plain names).
    While FORM_ACTION contains "PLACEHOLDER", the form falls back to mailto:.        */
-const FORM_ACTION   = "https://PLACEHOLDER.example/REPLACE_WITH_FORM_ENDPOINT";
+const FORM_ACTION   = "https://formsubmit.co/ajax/45e53a7cdea9976b220d7f2879195ad6"; // FormSubmit.co (free) alias for waitlist@zuvana.app
 const FIELD_CONTACT = "contact";   // e.g. "entry.1111111111" for Google Forms
 const FIELD_LANG    = "language";  // e.g. "entry.3333333333"
 const MAILTO_FALLBACK = "waitlist@zuvana.app"; // must be a mailbox you can read
@@ -92,7 +92,7 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--mut);border-top:1px solid 
     <form id="wl" novalidate action="#" method="post">
       <label for="contact" class="sr" data-i="lbl">Your phone or email</label>
       <input id="contact" name="contact" type="text" required aria-describedby="err" aria-invalid="false" autocomplete="email" inputmode="email" placeholder="Phone or email" data-ph="ph">
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
+      <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
       <p class="err" id="err" role="alert"></p>
       <button class="cta" type="submit" data-i="cta">Join the waitlist</button>
       <p class="ok" id="ok" role="status"></p>
@@ -139,8 +139,8 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--mut);border-top:1px solid 
 </div>
 
 <script>
-const T={es:{badge:"Muy pronto",h1:"Envía dinero a casa con un mensaje.",lead:"Solo escribe “envía $50 a mamá” en WhatsApp, iMessage o SMS. Ella toca un enlace y recoge el dinero. Comisión fija de $1.99, al tipo de cambio real.",lbl:"Tu teléfono o correo",ph:"Teléfono o correo",lblc:"¿A dónde envías dinero?",mx:"México",cn:"China",ot:"Otro país",cta:"Unirme a la lista",ok:"¡Gracias! Ya estás en la lista. Te avisaremos cuando abramos.",okm:"Se abrió tu app de correo. Toca Enviar para unirte a la lista.",e1:"Escribe tu teléfono o correo.",e2:"Revisa: escribe un correo válido o un teléfono con al menos 10 dígitos.",priv:"Sin spam. Solo te contactaremos sobre el lanzamiento. Es gratis.",b1:"envía $50 a mamá",b2:"Listo. Comisión: $1.99. Mamá recibe un enlace para recoger su dinero. ¿Confirmas?",b3:"Sí ✅",b4:"Enlace de mamá:",how:"Cómo funcionará",s1:"Escribe a quién y cuánto — como “envía $50 a mamá”.",s2:"Confirma la comisión de $1.99. Sin sorpresas.",s3:"Tu familia toca el enlace y recoge el dinero.",why:"Por qué ZUVANA",c1t:"Una sola comisión",c1:"La misma comisión pequeña en cada envío.",c2t:"Tipo de cambio real",c2:"Sin margen escondido en el tipo de cambio.",c3t:"Sin apps nuevas",c3:"Usa los chats que ya tienes.",where:"Primero a dónde",w1:"🇺🇸 → 🇲🇽 Planeamos empezar de EE. UU. a México. China está planeada después, con socios autorizados.",disc:"ZUVANA aún no está disponible. Esta página es solo una lista de espera — hoy no se puede enviar dinero. Las funciones, comisiones, países y fechas son planes y pueden cambiar, y dependen de aprobaciones regulatorias y acuerdos con socios."}};
-const EN={ok:"Thanks! You're on the list. We'll text or email you when we open.",okm:"Your email app opened. Tap Send to join the list.",e1:"Please enter your phone or email.",e2:"Please check it: enter a valid email or a phone number with at least 10 digits."};document.querySelectorAll("[data-i]").forEach(e=>EN[e.dataset.i]=e.textContent);EN.ph=document.getElementById("contact").placeholder;T.en=EN;
+const T={es:{badge:"Muy pronto",h1:"Envía dinero a casa con un mensaje.",lead:"Solo escribe “envía $50 a mamá” en WhatsApp, iMessage o SMS. Ella toca un enlace y recoge el dinero. Comisión fija de $1.99, al tipo de cambio real.",lbl:"Tu teléfono o correo",ph:"Teléfono o correo",lblc:"¿A dónde envías dinero?",mx:"México",cn:"China",ot:"Otro país",cta:"Unirme a la lista",ok:"¡Gracias! Ya estás en la lista. Te avisaremos cuando abramos.",okm:"Se abrió tu app de correo. Toca Enviar para unirte a la lista.",e1:"Escribe tu teléfono o correo.",e3:"No pudimos enviar tu registro. Inténtalo de nuevo o escríbenos a waitlist@zuvana.app.",e2:"Revisa: escribe un correo válido o un teléfono con al menos 10 dígitos.",priv:"Sin spam. Solo te contactaremos sobre el lanzamiento. Es gratis.",b1:"envía $50 a mamá",b2:"Listo. Comisión: $1.99. Mamá recibe un enlace para recoger su dinero. ¿Confirmas?",b3:"Sí ✅",b4:"Enlace de mamá:",how:"Cómo funcionará",s1:"Escribe a quién y cuánto — como “envía $50 a mamá”.",s2:"Confirma la comisión de $1.99. Sin sorpresas.",s3:"Tu familia toca el enlace y recoge el dinero.",why:"Por qué ZUVANA",c1t:"Una sola comisión",c1:"La misma comisión pequeña en cada envío.",c2t:"Tipo de cambio real",c2:"Sin margen escondido en el tipo de cambio.",c3t:"Sin apps nuevas",c3:"Usa los chats que ya tienes.",where:"Primero a dónde",w1:"🇺🇸 → 🇲🇽 Planeamos empezar de EE. UU. a México. China está planeada después, con socios autorizados.",disc:"ZUVANA aún no está disponible. Esta página es solo una lista de espera — hoy no se puede enviar dinero. Las funciones, comisiones, países y fechas son planes y pueden cambiar, y dependen de aprobaciones regulatorias y acuerdos con socios."}};
+const EN={ok:"Thanks! You're on the list. We'll text or email you when we open.",okm:"Your email app opened. Tap Send to join the list.",e1:"Please enter your phone or email.",e3:"Sorry, we couldn't send that. Please try again or email waitlist@zuvana.app.",e2:"Please check it: enter a valid email or a phone number with at least 10 digits."};document.querySelectorAll("[data-i]").forEach(e=>EN[e.dataset.i]=e.textContent);EN.ph=document.getElementById("contact").placeholder;T.en=EN;
 let lang="en";
 function setLang(l){lang=l;document.documentElement.lang=l;const d=T[l];
  document.querySelectorAll("[data-i]").forEach(e=>{if(d[e.dataset.i])e.textContent=d[e.dataset.i]});
@@ -159,15 +159,15 @@ function valid(v){if(!v)return bad("e1");
  if(/^[+\d\s().-]+$/.test(v)&&v.replace(/\D/g,"").length>=10)return true;return bad("e2")}
 function done(k){ok.dataset.k=k;ok.textContent=T[lang][k];ok.style.display="block";form.querySelector(".cta").disabled=true;inp.disabled=true}
 function mail(c){location.href="mailto:"+MAILTO_FALLBACK+"?subject="+encodeURIComponent("ZUVANA waitlist")+"&body="+encodeURIComponent("Contact: "+c+"\nLanguage: "+lang);done("okm")}
-form.addEventListener("submit",async ev=>{ev.preventDefault();
+const btn=form.querySelector(".cta");form.addEventListener("submit",async ev=>{ev.preventDefault();btn.disabled=true;
  const c=inp.value.trim();
- if(form._gotcha.value){done("ok");return} // bot: fake success, send nothing
- if(!valid(c))return;
+ if(form._honey.value){done("ok");return} // bot: fake success, send nothing
+ if(!valid(c)){btn.disabled=false;return}
  if(FORM_ACTION.includes("PLACEHOLDER")){mail(c);return}
- const fd=new FormData();fd.append(FIELD_CONTACT,c);fd.append(FIELD_LANG,lang);
+ const fd=new FormData();fd.append(FIELD_CONTACT,c);fd.append(FIELD_LANG,lang);fd.append("_subject","New Zuvana waitlist signup");fd.append("_captcha","false");fd.append("_template","table");fd.append("_honey","");if(c.includes("@"))fd.append("_replyto",c);
  try{if(FORM_ACTION.includes("docs.google.com")){await fetch(FORM_ACTION,{method:"POST",mode:"no-cors",body:fd})}
-  else{const r=await fetch(FORM_ACTION,{method:"POST",body:fd,headers:{Accept:"application/json"}});if(!r.ok)throw 0}
-  done("ok")}catch(e){mail(c)}});
+  else{const r=await fetch(FORM_ACTION,{method:"POST",body:fd,headers:{Accept:"application/json"}});const j=await r.json().catch(()=>({}));if(!r.ok||String(j.success)==="false")throw 0}
+  done("ok")}catch(e){err.dataset.k="e3";err.textContent=T[lang].e3;btn.disabled=false}});
 </script>
 </body>
 </html>
