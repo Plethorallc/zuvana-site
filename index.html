@@ -98,6 +98,7 @@ footer{padding:28px 0 40px;font-size:13px;color:var(--mut);border-top:1px solid 
       <label for="contact" class="sr" data-i="lbl">Your phone or email</label>
       <input id="contact" name="contact" type="text" required aria-describedby="err" aria-invalid="false" autocomplete="email" inputmode="email" placeholder="Phone or email" data-ph="ph">
       <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
+      <input type="hidden" name="ref" id="ref" value="">
       <p class="err" id="err" role="alert"></p>
       <button class="cta" type="submit" data-i="cta">Join the waitlist</button>
       <p class="ok" id="ok" role="status"></p>
@@ -159,6 +160,10 @@ document.querySelectorAll(".toggle button").forEach(b=>b.onclick=()=>setLang(b.d
 let saved=null;try{saved=localStorage.getItem("zl")}catch(e){}
 setLang(saved||((navigator.language||"").startsWith("es")?"es":"en"));
 
+/* Referral tag: ?ref= (or utm_source) -> hidden "ref" field */
+let REF="";try{const q=new URLSearchParams(location.search);REF=(q.get("ref")||q.get("utm_source")||"").trim().slice(0,40).replace(/[^\w.-]/g,"");
+}catch(e){}
+document.getElementById("ref").value=REF;
 const form=document.getElementById("wl"),inp=form.contact,err=document.getElementById("err"),ok=document.getElementById("ok");
 function bad(k){err.dataset.k=k;err.textContent=T[lang][k];inp.setAttribute("aria-invalid","true");inp.focus();return false}
 inp.addEventListener("input",()=>{err.textContent="";err.dataset.k="";inp.setAttribute("aria-invalid","false")});
@@ -166,13 +171,13 @@ function valid(v){if(!v)return bad("e1");
  if(/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v))return true;
  if(/^[+\d\s().-]+$/.test(v)&&v.replace(/\D/g,"").length>=10)return true;return bad("e2")}
 function done(k){ok.dataset.k=k;ok.textContent=T[lang][k];ok.style.display="block";form.querySelector(".cta").disabled=true;inp.disabled=true}
-function mail(c){location.href="mailto:"+MAILTO_FALLBACK+"?subject="+encodeURIComponent("ZUVANA waitlist")+"&body="+encodeURIComponent("Contact: "+c+"\nLanguage: "+lang);done("okm")}
+function mail(c){location.href="mailto:"+MAILTO_FALLBACK+"?subject="+encodeURIComponent("ZUVANA waitlist")+"&body="+encodeURIComponent("Contact: "+c+"\nLanguage: "+lang+"\nRef: "+(REF||"direct"));done("okm")}
 const btn=form.querySelector(".cta");form.addEventListener("submit",async ev=>{ev.preventDefault();btn.disabled=true;
  const c=inp.value.trim();
  if(form._honey.value){done("ok");return} // bot: fake success, send nothing
  if(!valid(c)){btn.disabled=false;return}
  if(FORM_ACTION.includes("PLACEHOLDER")){mail(c);return}
- const fd=new FormData();fd.append(FIELD_CONTACT,c);fd.append(FIELD_LANG,lang);fd.append("_subject","New Zuvana waitlist signup");fd.append("_captcha","false");fd.append("_template","table");fd.append("_honey","");if(c.includes("@"))fd.append("_replyto",c);
+ const fd=new FormData();fd.append(FIELD_CONTACT,c);fd.append(FIELD_LANG,lang);fd.append("ref",REF||"direct");fd.append("_subject","New Zuvana waitlist signup");fd.append("_captcha","false");fd.append("_template","table");fd.append("_honey","");if(c.includes("@"))fd.append("_replyto",c);
  try{if(FORM_ACTION.includes("docs.google.com")){await fetch(FORM_ACTION,{method:"POST",mode:"no-cors",body:fd})}
   else{const r=await fetch(FORM_ACTION,{method:"POST",body:fd,headers:{Accept:"application/json"}});const j=await r.json().catch(()=>({}));if(!r.ok||String(j.success)==="false")throw 0}
   done("ok")}catch(e){err.dataset.k="e3";err.textContent=T[lang].e3;btn.disabled=false}});
