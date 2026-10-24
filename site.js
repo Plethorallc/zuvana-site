@@ -132,7 +132,7 @@ function valid(v){if(!v)return bad("e1");
  if(/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v))return true;
  if(/^[+\d\s().-]+$/.test(v)&&v.replace(/\D/g,"").length>=10)return true;return bad("e2")}
 function done(k){ok.dataset.k=k;ok.textContent=msg(k);ok.style.display="block";btn.disabled=true;inp.disabled=true}
-function mail(c){location.href="mailto:"+MAILTO_FALLBACK+"?subject="+encodeURIComponent("ZUVANA waitlist")+"&body="+encodeURIComponent("Contact: "+c+"\nLanguage: "+lang+"\nRef: "+(REF||"direct"));done("okm")}
+function mail(c){location.href="mailto:"+MAILTO_FALLBACK+"?subject="+encodeURIComponent("Zuvana waitlist")+"&body="+encodeURIComponent("Contact: "+c+"\nLanguage: "+lang+"\nRef: "+(REF||"direct"));done("okm")}
 form.addEventListener("submit",async ev=>{ev.preventDefault();btn.disabled=true;
  const c=inp.value.trim();
  if(form._honey.value){done("ok");return} // bot: fake success, send nothing
