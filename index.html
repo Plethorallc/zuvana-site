@@ -32,6 +32,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add("js")</script>
 <script>
 /* ================= CONFIG — EDIT BEFORE LAUNCH =================
    FORM_ACTION: where waitlist signups POST.
@@ -47,11 +48,31 @@ const MAILTO_FALLBACK = "hello@zuvana.app"; // must be a mailbox you can read
 </script>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="f-us" viewBox="0 0 20 20"><rect width="20" height="20" fill="#fff"/><g fill="#c8102e"><rect y="0" width="20" height="1.54"/><rect y="3.08" width="20" height="1.54"/><rect y="6.15" width="20" height="1.54"/><rect y="9.23" width="20" height="1.54"/><rect y="12.3" width="20" height="1.54"/><rect y="15.38" width="20" height="1.54"/><rect y="18.46" width="20" height="1.54"/></g><rect width="9.5" height="10.77" fill="#1f3a8a"/><g fill="#fff"><circle cx="2.4" cy="2.4" r=".6"/><circle cx="4.75" cy="2.4" r=".6"/><circle cx="7.1" cy="2.4" r=".6"/><circle cx="3.6" cy="4.6" r=".6"/><circle cx="5.9" cy="4.6" r=".6"/><circle cx="2.4" cy="6.8" r=".6"/><circle cx="4.75" cy="6.8" r=".6"/><circle cx="7.1" cy="6.8" r=".6"/><circle cx="3.6" cy="9" r=".6"/><circle cx="5.9" cy="9" r=".6"/></g></symbol>
+    <symbol id="f-mx" viewBox="0 0 20 20"><rect width="6.67" height="20" fill="#006847"/><rect x="6.67" width="6.66" height="20" fill="#fff"/><rect x="13.33" width="6.67" height="20" fill="#ce1126"/><circle cx="10" cy="10" r="1.9" fill="#8a5a2b"/><path d="M8.3 11.2q1.7 1.4 3.4 0" stroke="#3a7d44" stroke-width=".6" fill="none"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-lang" viewBox="0 0 24 24"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></symbol>
+    <symbol id="i-bank" viewBox="0 0 24 24"><path d="M3 22h18"/><path d="M6 18v-7"/><path d="M10 18v-7"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="m12 2 8 5H4Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-checkc" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></symbol>
+    <symbol id="i-back" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+    <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></symbol>
+  </defs>
+</svg>
 <a class="skip" href="#main" data-i="skip">Skip to content</a>
 
 <header class="site-header" id="top">
   <div class="container nav">
-    <a class="brand" href="/" aria-label="Zuvana home"><img src="logo.svg" alt="" width="32" height="32">Zuvana</a>
+    <a class="brand" href="/" aria-label="Zuvana home"><img src="logo.svg" alt="" width="34" height="34">Zuvana</a>
     <ul class="nav-links">
       <li><a href="#how" data-i="nav1">How it works</a></li>
       <li><a href="#pricing" data-i="nav2">Pricing</a></li>
@@ -73,9 +94,9 @@ const MAILTO_FALLBACK = "hello@zuvana.app"; // must be a mailbox you can read
 <section class="hero">
   <div class="container hero-grid">
     <div>
-      <span class="eyebrow"><span class="dot" aria-hidden="true"></span><span data-i="badge">Coming soon · U.S. to Mexico</span></span>
-      <h1 data-i="h1">Send money home with a text.</h1>
-      <p class="lead" data-i="lead">Just type “send $50 to Mom” in WhatsApp, iMessage or SMS. She taps a link to receive the money in her bank account (cash pickup options planned). Planned flat $1.99 fee at launch; aiming for the real exchange rate.</p>
+      <span class="eyebrow"><span class="route" aria-hidden="true"><svg class="flag"><use href="#f-us"/></svg><svg class="ic"><use href="#i-arrow"/></svg><svg class="flag"><use href="#f-mx"/></svg></span><span data-i="badge">Coming soon · U.S. to Mexico</span></span>
+      <h1><span data-i="h1a">Send money home</span> <em data-i="h1b">with a text.</em></h1>
+      <p class="lead" data-i="lead">Just type “send $50 to Mom” in WhatsApp, iMessage or SMS. She taps a link to receive the money in her bank account (cash pickup options planned).</p>
 
       <form id="wl" class="waitlist" novalidate action="#" method="post">
         <div class="form-row">
@@ -83,26 +104,46 @@ const MAILTO_FALLBACK = "hello@zuvana.app"; // must be a mailbox you can read
           <input id="contact" class="input" name="contact" type="text" required aria-describedby="err" aria-invalid="false" autocomplete="email" inputmode="email" placeholder="Phone or email" data-ph="ph">
           <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="sr" aria-hidden="true">
           <input type="hidden" name="ref" id="ref" value="">
-          <button class="btn btn-primary cta-submit" type="submit" data-i="cta">Join the waitlist</button>
+          <button class="btn btn-primary cta-submit" type="submit"><span data-i="cta">Join the waitlist</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
         </div>
         <p class="err" id="err" role="alert"></p>
         <p class="ok" id="ok" role="status"></p>
-        <p class="fine" data-i="priv">No spam. We'll only contact you about launch. Free to join.</p>
+        <p class="fine" data-i="priv">No spam. We'll only contact you about launch.</p>
         <p class="fine" data-i="sms">By joining with a phone number, you agree to receive up to a few launch texts from ZUVANA. Msg &amp; data rates may apply. Reply STOP to opt out.</p>
       </form>
+      <ul class="perks">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i="pk1">Free to join</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i="pk2">Planned flat $1.99 fee</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg><span data-i="pk3">No app to download</span></li>
+      </ul>
     </div>
 
-    <div class="phone-wrap">
-      <div class="phone" role="img" aria-label="Example text conversation: send $50 to Mom" data-ia="phonelbl">
-        <div class="notch" aria-hidden="true"></div>
-        <div class="phone-top" aria-hidden="true"><span>9:41</span><span class="status"><i style="height:5px"></i><i style="height:7px"></i><i style="height:9px"></i><i style="height:11px"></i></span></div>
-        <div class="chat-head" aria-hidden="true"><img src="logo.svg" alt="" width="40" height="40"><span>Zuvana</span></div>
-        <div class="chat" aria-hidden="true">
-          <span class="time" data-i="tm">Today 9:41 AM</span>
-          <div class="bub me" data-i="b1">send $50 to Mom</div>
-          <div class="bub them" data-i="b2">Got it. Fee: $1.99 (planned). Mom gets a link to receive it in her bank account. Confirm?</div>
-          <div class="bub me" data-i="b3">Yes</div>
-          <div class="bub them"><span data-i="b4">Mom's link:</span> <span class="lnk">zuvana.app/r/…</span></div>
+    <div>
+      <div class="stage anim" id="stage">
+        <div class="phone" role="img" aria-label="Example text conversation: send $50 to Mom" data-ia="phonelbl">
+          <div class="screen" aria-hidden="true">
+            <div class="island"></div>
+            <div class="sbar"><span>9:41</span><span class="sig"><svg viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="currentColor"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="currentColor"/><rect x="10" y="3" width="3" height="9" rx="1" fill="currentColor"/><rect x="15" y="0" width="3" height="12" rx="1" fill="currentColor"/></svg><svg viewBox="0 0 26 12"><rect x=".5" y=".5" width="22" height="11" rx="3.5" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="17" height="8" rx="2" fill="currentColor"/><rect x="23.5" y="4" width="2" height="4" rx="1" fill="currentColor" opacity=".4"/></svg></span></div>
+            <div class="chead"><svg class="ic back"><use href="#i-back"/></svg><img src="logo.svg" alt="" width="44" height="44"><b>Zuvana</b></div>
+            <div class="chat">
+              <span class="time" data-i="tm">Today 9:41 AM</span>
+              <div class="bub me" data-i="b1">send $50 to Mom</div>
+              <div class="typing" id="ty1"><i></i><i></i><i></i></div>
+              <div class="bub them" data-i="b2">Got it. Fee: $1.99 (planned). Mom gets a link to receive it in her bank account. Confirm?</div>
+              <div class="bub me" data-i="b3">Yes</div>
+              <div class="typing" id="ty2"><i></i><i></i><i></i></div>
+              <div class="bub them"><span data-i="b4">Mom's link:</span> <span class="lnk">zuvana.app/r/…</span></div>
+            </div>
+            <div class="compose"><span data-i="msgph">Text message</span><b><svg class="ic"><use href="#i-arrow"/></svg></b></div>
+          </div>
+        </div>
+        <div class="float float-fee" aria-hidden="true">
+          <span class="fi"><svg class="ic"><use href="#i-receipt"/></svg></span>
+          <span><small data-i="ff1">Planned fee</small><b class="amt">$1.99</b><span class="pv" data-i="pv">Preview</span></span>
+        </div>
+        <div class="float float-received" aria-hidden="true">
+          <span class="fi"><svg class="ic"><use href="#i-check"/></svg></span>
+          <span><b data-i="fr1">Mom received it</b><small data-i="fr2">$50.00 · to her bank account</small><span class="pv" data-i="pv">Preview</span></span>
         </div>
       </div>
       <p class="caption" data-i="cap">Preview of the planned experience. Not available yet.</p>
@@ -112,70 +153,155 @@ const MAILTO_FALLBACK = "hello@zuvana.app"; // must be a mailbox you can read
 
 <section class="section alt" id="how">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head center reveal">
       <p class="kicker" data-i="howk">How it will work</p>
       <h2 data-i="how">Three steps. No new app.</h2>
       <p data-i="howp">Use the chat app you already have. Zuvana is designed to keep sending money as simple as sending a message.</p>
     </div>
     <ol class="steps">
-      <li class="step"><span class="step-num" aria-hidden="true">1</span><h3 data-i="s1t">Text who and how much</h3><p data-i="s1">Write something like “send $50 to Mom” in WhatsApp, iMessage or SMS.</p></li>
-      <li class="step"><span class="step-num" aria-hidden="true">2</span><h3 data-i="s2t">Review and confirm</h3><p data-i="s2">See the fee before you confirm — a planned flat $1.99 at launch. No surprises.</p></li>
-      <li class="step"><span class="step-num" aria-hidden="true">3</span><h3 data-i="s3t">Your family receives it</h3><p data-i="s3">They tap a link to receive the money in their bank account (cash pickup options planned).</p></li>
+      <li class="step reveal">
+        <div class="step-art" aria-hidden="true"><div class="mini">
+          <div class="bub me" data-i="b1">send $50 to Mom</div>
+          <div class="typing"><i></i><i></i><i></i></div>
+        </div></div>
+        <div class="step-body"><div class="step-top"><span class="step-num" aria-hidden="true">1</span><svg class="ic" aria-hidden="true"><use href="#i-msg"/></svg></div><h3 data-i="s1t">Text who and how much</h3><p data-i="s1">Write something like “send $50 to Mom” in WhatsApp, iMessage or SMS.</p></div>
+      </li>
+      <li class="step reveal">
+        <div class="step-art" aria-hidden="true"><div class="mini">
+          <div class="row"><span data-i="m2a">Sending</span><b>$50.00</b></div>
+          <div class="row"><span data-i="m2b">Planned fee</span><b>$1.99</b></div>
+          <div class="row tot"><span data-i="m2c">You pay</span><b>$51.99</b></div>
+          <div class="mbtn" data-i="m2d">Confirm</div>
+        </div></div>
+        <div class="step-body"><div class="step-top"><span class="step-num" aria-hidden="true">2</span><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg></div><h3 data-i="s2t">Review and confirm</h3><p data-i="s2">See the fee before you confirm — a planned flat $1.99 at launch. No surprises.</p></div>
+      </li>
+      <li class="step reveal">
+        <div class="step-art" aria-hidden="true"><div class="mini">
+          <span class="av"><svg class="ic"><use href="#i-user"/></svg></span>
+          <p class="mt" data-i="m3a">Money sent to you</p>
+          <div class="big">$50.00</div>
+          <div class="mbtn" data-i="m3b">Receive to bank account</div>
+        </div></div>
+        <div class="step-body"><div class="step-top"><span class="step-num" aria-hidden="true">3</span><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg></div><h3 data-i="s3t">Your family receives it</h3><p data-i="s3">They tap a link to receive the money in their bank account (cash pickup options planned).</p></div>
+      </li>
     </ol>
+  </div>
+</section>
+
+<section class="section" id="why">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="kicker" data-i="wk">Why Zuvana</p>
+      <h2 data-i="wh">Sending money, minus the hassle.</h2>
+      <p data-i="wp">We're designing every part of Zuvana around one idea: if you can send a text, you can send money home.</p>
+    </div>
+    <div class="features">
+      <div class="feat reveal"><span class="fic"><svg class="ic" aria-hidden="true"><use href="#i-phone"/></svg></span><h3 data-i="f1t">No app download needed</h3><p data-i="f1">Nothing new to install or learn. Use the phone you already have.</p></div>
+      <div class="feat reveal"><span class="fic"><svg class="ic" aria-hidden="true"><use href="#i-msg"/></svg></span><h3 data-i="f2t">Works in the chat you already use</h3><p data-i="f2">WhatsApp, iMessage and regular SMS are planned at launch.</p></div>
+      <div class="feat reveal"><span class="fic"><svg class="ic" aria-hidden="true"><use href="#i-receipt"/></svg></span><h3 data-i="f3t">One simple planned fee</h3><p data-i="f3">A flat $1.99 per transfer is planned at launch — the same for $50 or $500.</p></div>
+      <div class="feat reveal"><span class="fic"><svg class="ic" aria-hidden="true"><use href="#i-eye"/></svg></span><h3 data-i="f4t">See everything before you confirm</h3><p data-i="f4">The fee and exchange rate are shown before you say yes.</p></div>
+      <div class="feat reveal"><span class="fic"><svg class="ic" aria-hidden="true"><use href="#i-lang"/></svg></span><h3 data-i="f5t">Spanish and English</h3><p data-i="f5">Use Zuvana in whichever language feels like home.</p></div>
+      <div class="feat reveal"><span class="fic"><svg class="ic" aria-hidden="true"><use href="#i-bank"/></svg></span><h3 data-i="f6t">Straight to their bank account</h3><p data-i="f6">Recipients receive the money in their bank account (cash pickup options planned).</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="families">
+  <div class="container families">
+    <div class="reveal">
+      <div class="photos">
+        <img class="p1" src="img/abuela.webp" alt="A grandmother smiling at her phone in a sunlit kitchen" data-alt="img1" width="1152" height="864" loading="lazy" decoding="async">
+        <img class="p2" src="img/sender.webp" alt="A man smiling at his phone in his truck" data-alt="img2" width="1152" height="864" loading="lazy" decoding="async">
+      </div>
+      <p class="photo-note" data-i="pn">Illustrative photos.</p>
+    </div>
+    <div class="reveal">
+      <p class="kicker" data-i="fk">Made for families</p>
+      <h2 data-i="fh">For the people back home.</h2>
+      <p class="lead" data-i="fp">Rent, school supplies, a birthday, medicine. When family needs a hand, sending money shouldn't mean a trip across town or a confusing app.</p>
+      <ul class="ticks">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-checkc"/></svg><span data-i="t1">Planned so your family doesn't need a new app — they just tap a link.</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-checkc"/></svg><span data-i="t2">Plain-language messages in Spanish or English.</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-checkc"/></svg><span data-i="t3">A clear total before every transfer.</span></li>
+      </ul>
+      <div class="routecard">
+        <svg class="flag" aria-hidden="true"><use href="#f-us"/></svg>
+        <span class="path" aria-hidden="true"><svg viewBox="0 0 120 24" preserveAspectRatio="none"><path d="M2 20 Q60 -10 118 20" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="4 5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg></span>
+        <svg class="flag" aria-hidden="true"><use href="#f-mx"/></svg>
+        <span><b data-i="rc1">U.S. → Mexico</b><small data-i="rc2">First route planned at launch</small></span>
+      </div>
+    </div>
   </div>
 </section>
 
 <section class="section" id="pricing">
   <div class="container pricing">
-    <div class="section-head" style="margin-bottom:0">
+    <div class="reveal">
       <p class="kicker" data-i="prk">Pricing</p>
       <h2 data-i="prh">Simple, upfront pricing.</h2>
-      <p data-i="prp">We plan to charge one small flat fee per transfer, shown before you confirm. Final pricing may change before launch.</p>
-    </div>
-    <div class="price-card">
-      <p class="price-label" data-i="prl">Planned fee per transfer</p>
-      <div class="price"><b>$1.99</b><span data-i="prf">flat</span></div>
-      <span class="tag" data-i="prt">Planned at launch</span>
-      <ul class="checks">
-        <li><svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#f0f7f4"/><path d="M6.5 11.5l3 3 6-6.5" fill="none" stroke="#0a5c4c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i="pc1">The same planned fee whether you send $50 or $500.</span></li>
-        <li><svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#f0f7f4"/><path d="M6.5 11.5l3 3 6-6.5" fill="none" stroke="#0a5c4c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i="pc2">Aiming for the real exchange rate, with no hidden markup planned.</span></li>
-        <li><svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#f0f7f4"/><path d="M6.5 11.5l3 3 6-6.5" fill="none" stroke="#0a5c4c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i="pc3">Final fee and rate shown before you confirm.</span></li>
-        <li><svg viewBox="0 0 22 22" aria-hidden="true"><circle cx="11" cy="11" r="11" fill="#f0f7f4"/><path d="M6.5 11.5l3 3 6-6.5" fill="none" stroke="#0a5c4c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg><span data-i="pc4">Recipients receive the money in their bank account (cash pickup options planned).</span></li>
+      <p class="lead" data-i="prp">We plan to charge one small flat fee per transfer, shown before you confirm. Final pricing may change before launch.</p>
+      <ul class="ticks">
+        <li><svg class="ic" aria-hidden="true"><use href="#i-checkc"/></svg><span data-i="pc1">The same planned fee whether you send $50 or $500.</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-checkc"/></svg><span data-i="pc2">Aiming for the real exchange rate, with no hidden markup planned.</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-checkc"/></svg><span data-i="pc3">Final fee and rate shown before you confirm.</span></li>
+        <li><svg class="ic" aria-hidden="true"><use href="#i-checkc"/></svg><span data-i="pc4">Recipients receive the money in their bank account (cash pickup options planned).</span></li>
       </ul>
-      <a class="btn btn-primary" href="#wl" data-i="prcta">Join the waitlist</a>
-      <p class="price-note" data-i="prn">Free to join. No money can be sent today.</p>
+    </div>
+    <div class="calc reveal" id="calc">
+      <label class="calc-label" for="amt" data-i="cl">How much do you want to send?</label>
+      <div class="amt-field">
+        <span class="cur" aria-hidden="true">$</span>
+        <input id="amt" type="text" inputmode="decimal" autocomplete="off" value="200" maxlength="9" aria-describedby="chint">
+        <span class="ccy"><svg class="flag" aria-hidden="true"><use href="#f-us"/></svg>USD</span>
+      </div>
+      <p class="calc-hint" id="chint" aria-live="polite"></p>
+      <div class="chips" role="group" aria-label="Example amounts" data-ia="chipslbl">
+        <button type="button" class="chip" data-v="50" aria-pressed="false">$50</button>
+        <button type="button" class="chip" data-v="100" aria-pressed="false">$100</button>
+        <button type="button" class="chip" data-v="200" aria-pressed="true">$200</button>
+        <button type="button" class="chip" data-v="500" aria-pressed="false">$500</button>
+      </div>
+      <dl class="lines" aria-live="polite">
+        <div class="line"><dt data-i="cs">You send</dt><dd class="num" id="o-send">$200.00</dd></div>
+        <div class="line"><dt><span data-i="cf">Planned fee</span><span class="pl" data-i="pl">Planned</span></dt><dd class="num">$1.99</dd></div>
+        <div class="line total"><dt data-i="ct">You pay</dt><dd class="num" id="o-total">$201.99</dd></div>
+      </dl>
+      <p class="calc-note"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span data-i="cn">Planned pricing; exchange rate shown before you confirm.</span></p>
+      <a class="btn btn-primary" href="#wl"><span data-i="prcta">Join the waitlist</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      <p class="fine" style="text-align:center" data-i="prn">Free to join. No money can be sent today.</p>
     </div>
   </div>
 </section>
 
 <section class="section alt" id="faq">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head center reveal">
       <p class="kicker" data-i="faqk">FAQ</p>
       <h2 data-i="faqh">Questions, answered.</h2>
     </div>
-    <div class="faq">
-      <details><summary data-i="q1">Can I send money with Zuvana today?</summary><p data-i="a1">Not yet. Zuvana is coming soon and this site is a waitlist only — no money can be sent today. Join the list and we'll let you know when we open.</p></details>
-      <details><summary data-i="q2">How much will it cost?</summary><p data-i="a2">We're planning a flat $1.99 fee per transfer at launch. Pricing isn't final and may change; you'll always see the fee before you confirm.</p></details>
-      <details><summary data-i="q3">What exchange rate will I get?</summary><p data-i="a3">We're aiming for the real exchange rate with no hidden markup. The final rate will be shown before you confirm each transfer.</p></details>
-      <details><summary data-i="q4">How will my family receive the money?</summary><p data-i="a4">They'll get a link by text and receive the money in their bank account (cash pickup options planned).</p></details>
-      <details><summary data-i="q5">Which chat apps will work?</summary><p data-i="a5">We're planning to support WhatsApp, iMessage and regular SMS, so there's no new app to download.</p></details>
-      <details><summary data-i="q6">Where will Zuvana be available?</summary><p data-i="a6">We plan to start with sending from the U.S. to Mexico. More countries may come later.</p></details>
-      <details><summary data-i="q7">What do you do with my phone number or email?</summary><p><span data-i="a7">We only use it to contact you about launch. We don't sell it. Read our</span> <a href="privacy.html" data-i="a7l">Privacy Policy</a>.</p></details>
+    <div class="faq reveal">
+      <details><summary><span data-i="q1">Can I send money with Zuvana today?</span><span class="pm" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span></summary><div class="ans"><p data-i="a1">Not yet. Zuvana is coming soon and this site is a waitlist only — no money can be sent today. Join the list and we'll let you know when we open.</p></div></details>
+      <details><summary><span data-i="q2">How much will it cost?</span><span class="pm" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span></summary><div class="ans"><p data-i="a2">We're planning a flat $1.99 fee per transfer at launch. Pricing isn't final and may change; you'll always see the fee before you confirm.</p></div></details>
+      <details><summary><span data-i="q3">What exchange rate will I get?</span><span class="pm" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span></summary><div class="ans"><p data-i="a3">We're aiming for the real exchange rate with no hidden markup. The final rate will be shown before you confirm each transfer.</p></div></details>
+      <details><summary><span data-i="q4">How will my family receive the money?</span><span class="pm" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span></summary><div class="ans"><p data-i="a4">They'll get a link by text and receive the money in their bank account (cash pickup options planned).</p></div></details>
+      <details><summary><span data-i="q5">Which chat apps will work?</span><span class="pm" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span></summary><div class="ans"><p data-i="a5">We're planning to support WhatsApp, iMessage and regular SMS, so there's no new app to download.</p></div></details>
+      <details><summary><span data-i="q6">Where will Zuvana be available?</span><span class="pm" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span></summary><div class="ans"><p data-i="a6">We plan to start with sending from the U.S. to Mexico. More countries may come later.</p></div></details>
+      <details><summary><span data-i="q7">What do you do with my phone number or email?</span><span class="pm" aria-hidden="true"><svg class="ic"><use href="#i-plus"/></svg></span></summary><div class="ans"><p><span data-i="a7">We only use it to contact you about launch. We don't sell it. Read our</span> <a href="privacy.html" data-i="a7l">Privacy Policy</a>.</p></div></details>
     </div>
   </div>
 </section>
 
 <section class="section" id="about">
   <div class="container about">
-    <div>
+    <div class="reveal">
       <p class="kicker" data-i="abk">About</p>
       <h2 data-i="abh">Built in California by BlockPay LLC.</h2>
       <p data-i="ab1">Zuvana is a project of BlockPay LLC, a California company. We're building it because sending money to family should be as easy as sending a message, with a fee you can see upfront.</p>
       <p data-i="ab2">We're not live yet. Features, fees, countries and launch dates are planned and may change, and will depend on regulatory approvals and partner agreements.</p>
       <p><span data-i="ab3">Questions or feedback? Email us:</span> <a href="mailto:hello@zuvana.app">hello@zuvana.app</a></p>
     </div>
-    <div class="about-card">
+    <div class="about-card reveal">
+      <div class="ah"><img src="logo.svg" alt="" width="44" height="44"><span><b>Zuvana</b><small data-i="abc">A BlockPay LLC project</small></span></div>
       <dl>
         <div><dt data-i="d1">Company</dt><dd>BlockPay LLC</dd></div>
         <div><dt data-i="d2">Based in</dt><dd data-i="d2v">California, USA</dd></div>
@@ -186,12 +312,18 @@ const MAILTO_FALLBACK = "hello@zuvana.app"; // must be a mailbox you can read
   </div>
 </section>
 
-<section class="section" style="border-top:0;padding-top:0">
+<section class="section" style="padding-top:0">
   <div class="container">
-    <div class="cta-band">
-      <h2 data-i="bandh">Be the first to know when we launch.</h2>
-      <p data-i="bandp">Join the waitlist with your phone or email. It's free, and we'll only contact you about launch.</p>
-      <a class="btn" href="#wl" data-i="bandcta">Join the waitlist</a>
+    <div class="cta-band reveal">
+      <img src="img/family.webp" alt="" width="1280" height="720" loading="lazy" decoding="async">
+      <div class="cta-inner">
+        <h2 data-i="bandh">Be the first to know when we launch.</h2>
+        <p data-i="bandp">Join the waitlist with your phone or email. It's free, and we'll only contact you about launch.</p>
+        <div class="cta-actions">
+          <a class="btn btn-white" href="#wl"><span data-i="bandcta">Join the waitlist</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="guides/" data-i="bandg">Read our guides</a>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -200,45 +332,99 @@ const MAILTO_FALLBACK = "hello@zuvana.app"; // must be a mailbox you can read
 <footer class="site-footer">
   <div class="container foot-grid">
     <div class="foot-top">
-      <a class="brand" href="/"><img src="logo.svg" alt="" width="32" height="32">Zuvana</a>
-      <ul class="foot-links">
-        <li><a href="guides/" data-i="guides">Guides</a></li>
-        <li><a href="privacy.html" data-i="fpriv">Privacy</a></li>
-        <li><a href="terms.html" data-i="fterms">Terms</a></li>
-        <li><a href="mailto:hello@zuvana.app">hello@zuvana.app</a></li>
-      </ul>
+      <div>
+        <a class="brand" href="/"><img src="logo.svg" alt="" width="34" height="34">Zuvana</a>
+        <p class="foot-tag" data-i="ftag">Send money home with a text. Coming soon from the U.S. to Mexico.</p>
+      </div>
+      <div class="foot-cols">
+        <div><h4 data-i="fc1">Product</h4><ul><li><a href="#how" data-i="nav1">How it works</a></li><li><a href="#pricing" data-i="nav2">Pricing</a></li><li><a href="#faq" data-i="nav3">FAQ</a></li></ul></div>
+        <div><h4 data-i="fc2">Company</h4><ul><li><a href="#about" data-i="nav4">About</a></li><li><a href="guides/" data-i="guides">Guides</a></li><li><a href="mailto:hello@zuvana.app">hello@zuvana.app</a></li></ul></div>
+        <div><h4 data-i="fc3">Legal</h4><ul><li><a href="privacy.html" data-i="fpriv">Privacy</a></li><li><a href="terms.html" data-i="fterms">Terms</a></li></ul></div>
+      </div>
     </div>
-    <p class="disclaimer" data-i="disc">ZUVANA is not available yet. This page is a waitlist only — no money can be sent today. Features, fees, countries and launch dates are planned and may change, and will depend on regulatory approvals and partner agreements.</p>
-    <p class="copy">© 2026 BlockPay LLC · zuvana.app</p>
+    <div class="foot-bottom">
+      <p class="disclaimer" data-i="disc">ZUVANA is not available yet. This page is a waitlist only — no money can be sent today. Features, fees, countries and launch dates are planned and may change, and will depend on regulatory approvals and partner agreements.</p>
+      <p class="copy">© 2026 BlockPay LLC · zuvana.app</p>
+    </div>
   </div>
 </footer>
 
+<a class="btn btn-primary mobile-cta" href="#wl" id="mcta" aria-hidden="true" tabindex="-1"><span data-i="mcta">Join the waitlist</span><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+
 <script>
 const T={es:{title:"Envía dinero a México por mensaje — Comisión fija planeada de $1.99 | ZUVANA",skip:"Ir al contenido",nav1:"Cómo funciona",nav2:"Precio",nav3:"Preguntas",nav4:"Nosotros",nav5:"Guías",navcta:"Unirme a la lista",
-badge:"Muy pronto · De EE. UU. a México",h1:"Envía dinero a casa con un mensaje.",lead:"Solo escribe “envía $50 a mamá” en WhatsApp, iMessage o SMS. Ella toca un enlace para recibir el dinero en su cuenta bancaria (opciones de retiro en efectivo planeadas). Comisión fija planeada de $1.99 al lanzar; buscamos el tipo de cambio real.",
-lbl:"Tu teléfono o correo",ph:"Teléfono o correo",cta:"Unirme a la lista",ok:"¡Gracias! Ya estás en la lista. Te avisaremos cuando abramos.",okm:"Se abrió tu app de correo. Toca Enviar para unirte a la lista.",e1:"Escribe tu teléfono o correo.",e3:"No pudimos enviar tu registro. Inténtalo de nuevo o escríbenos a hello@zuvana.app.",e2:"Revisa: escribe un correo válido o un teléfono con al menos 10 dígitos.",priv:"Sin spam. Solo te contactaremos sobre el lanzamiento. Es gratis.",sms:"Al unirte con un número de teléfono, aceptas recibir algunos mensajes de texto de ZUVANA sobre el lanzamiento. Pueden aplicar tarifas de mensajes y datos. Responde STOP para cancelar.",
-phonelbl:"Ejemplo de conversación: envía $50 a mamá",tm:"Hoy 9:41 a. m.",b1:"envía $50 a mamá",b2:"Listo. Comisión: $1.99 (planeada). Mamá recibe un enlace para recibirlo en su cuenta bancaria. ¿Confirmas?",b3:"Sí",b4:"Enlace de mamá:",cap:"Vista previa de la experiencia planeada. Aún no disponible.",
+badge:"Muy pronto · De EE. UU. a México",h1a:"Envía dinero a casa",h1b:"con un mensaje.",lead:"Solo escribe “envía $50 a mamá” en WhatsApp, iMessage o SMS. Ella toca un enlace para recibir el dinero en su cuenta bancaria (opciones de retiro en efectivo planeadas).",
+lbl:"Tu teléfono o correo",ph:"Teléfono o correo",cta:"Unirme a la lista",ok:"¡Gracias! Ya estás en la lista. Te avisaremos cuando abramos.",okm:"Se abrió tu app de correo. Toca Enviar para unirte a la lista.",e1:"Escribe tu teléfono o correo.",e3:"No pudimos enviar tu registro. Inténtalo de nuevo o escríbenos a hello@zuvana.app.",e2:"Revisa: escribe un correo válido o un teléfono con al menos 10 dígitos.",priv:"Sin spam. Solo te contactaremos sobre el lanzamiento.",sms:"Al unirte con un número de teléfono, aceptas recibir algunos mensajes de texto de ZUVANA sobre el lanzamiento. Pueden aplicar tarifas de mensajes y datos. Responde STOP para cancelar.",
+pk1:"Es gratis unirte",pk2:"Comisión fija planeada de $1.99",pk3:"Sin apps que descargar",
+phonelbl:"Ejemplo de conversación: envía $50 a mamá",tm:"Hoy 9:41 a. m.",b1:"envía $50 a mamá",b2:"Listo. Comisión: $1.99 (planeada). Mamá recibe un enlace para recibirlo en su cuenta bancaria. ¿Confirmas?",b3:"Sí",b4:"Enlace de mamá:",msgph:"Mensaje de texto",cap:"Vista previa de la experiencia planeada. Aún no disponible.",
+ff1:"Comisión planeada",pv:"Vista previa",fr1:"Mamá lo recibió",fr2:"$50.00 · a su cuenta bancaria",
 howk:"Cómo funcionará",how:"Tres pasos. Sin apps nuevas.",howp:"Usa el chat que ya tienes. Zuvana está pensado para que enviar dinero sea tan fácil como mandar un mensaje.",s1t:"Escribe a quién y cuánto",s1:"Escribe algo como “envía $50 a mamá” en WhatsApp, iMessage o SMS.",s2t:"Revisa y confirma",s2:"Ve la comisión antes de confirmar — fija de $1.99 planeada al lanzar. Sin sorpresas.",s3t:"Tu familia lo recibe",s3:"Tocan un enlace para recibir el dinero en su cuenta bancaria (opciones de retiro en efectivo planeadas).",
-prk:"Precio",prh:"Precio simple y claro.",prp:"Planeamos cobrar una sola comisión pequeña por envío, que verás antes de confirmar. El precio final puede cambiar antes del lanzamiento.",prl:"Comisión planeada por envío",prf:"fija",prt:"Planeada al lanzar",pc1:"La misma comisión planeada si envías $50 o $500.",pc2:"Buscamos el tipo de cambio real, sin margen oculto planeado.",pc3:"Verás la comisión y el tipo de cambio finales antes de confirmar.",pc4:"Quien recibe obtiene el dinero en su cuenta bancaria (opciones de retiro en efectivo planeadas).",prcta:"Unirme a la lista",prn:"Es gratis unirte. Hoy no se puede enviar dinero.",
+m2a:"Envías",m2b:"Comisión planeada",m2c:"Pagas",m2d:"Confirmar",m3a:"Te enviaron dinero",m3b:"Recibir en mi cuenta bancaria",
+wk:"Por qué Zuvana",wh:"Enviar dinero, sin complicaciones.",wp:"Estamos diseñando cada parte de Zuvana con una idea: si puedes mandar un mensaje, puedes enviar dinero a casa.",
+f1t:"No necesitas descargar nada",f1:"Nada nuevo que instalar ni aprender. Usa el teléfono que ya tienes.",f2t:"Funciona en el chat que ya usas",f2:"WhatsApp, iMessage y SMS normal están planeados para el lanzamiento.",f3t:"Una sola comisión planeada",f3:"Una comisión fija de $1.99 por envío planeada al lanzar — la misma para $50 o $500.",f4t:"Ve todo antes de confirmar",f4:"La comisión y el tipo de cambio se muestran antes de que digas que sí.",f5t:"Español e inglés",f5:"Usa Zuvana en el idioma en el que te sientas en casa.",f6t:"Directo a su cuenta bancaria",f6:"Quien recibe obtiene el dinero en su cuenta bancaria (opciones de retiro en efectivo planeadas).",
+img1:"Una abuela sonriendo mientras mira su teléfono en una cocina soleada",img2:"Un hombre sonriendo mientras mira su teléfono en su camioneta",pn:"Fotos ilustrativas.",
+fk:"Hecho para familias",fh:"Para los que están en casa.",fp:"La renta, útiles escolares, un cumpleaños, medicinas. Cuando la familia necesita una mano, enviar dinero no debería significar cruzar la ciudad ni usar una app complicada.",t1:"Pensado para que tu familia no necesite una app nueva — solo toca un enlace.",t2:"Mensajes claros en español o inglés.",t3:"Un total claro antes de cada envío.",rc1:"EE. UU. → México",rc2:"Primera ruta planeada al lanzar",
+prk:"Precio",prh:"Precio simple y claro.",prp:"Planeamos cobrar una sola comisión pequeña por envío, que verás antes de confirmar. El precio final puede cambiar antes del lanzamiento.",pc1:"La misma comisión planeada si envías $50 o $500.",pc2:"Buscamos el tipo de cambio real, sin margen oculto planeado.",pc3:"Verás la comisión y el tipo de cambio finales antes de confirmar.",pc4:"Quien recibe obtiene el dinero en su cuenta bancaria (opciones de retiro en efectivo planeadas).",
+cl:"¿Cuánto quieres enviar?",chipslbl:"Montos de ejemplo",cs:"Envías",cf:"Comisión",pl:"Planeada",ct:"Pagas",cn:"Precio planeado; verás el tipo de cambio antes de confirmar.",cinv:"Escribe un monto para ver el total planeado.",prcta:"Unirme a la lista",prn:"Es gratis unirte. Hoy no se puede enviar dinero.",
 faqk:"Preguntas",faqh:"Preguntas frecuentes.",q1:"¿Puedo enviar dinero con Zuvana hoy?",a1:"Todavía no. Zuvana llegará muy pronto y este sitio es solo una lista de espera — hoy no se puede enviar dinero. Únete a la lista y te avisaremos cuando abramos.",q2:"¿Cuánto costará?",a2:"Planeamos una comisión fija de $1.99 por envío al lanzar. El precio no es definitivo y puede cambiar; siempre verás la comisión antes de confirmar.",q3:"¿Qué tipo de cambio tendré?",a3:"Buscamos ofrecer el tipo de cambio real, sin margen oculto. Verás el tipo de cambio final antes de confirmar cada envío.",q4:"¿Cómo recibirá el dinero mi familia?",a4:"Recibirán un enlace por mensaje y obtendrán el dinero en su cuenta bancaria (opciones de retiro en efectivo planeadas).",q5:"¿Qué apps de chat funcionarán?",a5:"Planeamos funcionar con WhatsApp, iMessage y SMS normal, así que no tendrás que descargar otra app.",q6:"¿Dónde estará disponible Zuvana?",a6:"Planeamos empezar con envíos de EE. UU. a México. Más países podrían llegar después.",q7:"¿Qué hacen con mi teléfono o correo?",a7:"Solo lo usamos para avisarte sobre el lanzamiento. No lo vendemos. Lee nuestro",a7l:"Aviso de privacidad",
-abk:"Nosotros",abh:"Creado en California por BlockPay LLC.",ab1:"Zuvana es un proyecto de BlockPay LLC, una empresa de California. Lo estamos creando porque enviar dinero a la familia debería ser tan fácil como mandar un mensaje, con una comisión que ves desde el principio.",ab2:"Todavía no estamos disponibles. Las funciones, comisiones, países y fechas son planes y pueden cambiar, y dependen de aprobaciones regulatorias y acuerdos con socios.",ab3:"¿Preguntas o comentarios? Escríbenos:",d1:"Empresa",d2:"Ubicación",d2v:"California, EE. UU.",d3:"Estado",d3v:"Muy pronto — lista de espera abierta",d4:"Contacto",
-bandh:"Sé de los primeros en saber cuándo lanzamos.",bandp:"Únete a la lista de espera con tu teléfono o correo. Es gratis y solo te contactaremos sobre el lanzamiento.",bandcta:"Unirme a la lista",
-guides:"Guías",fpriv:"Privacidad",fterms:"Términos",disc:"ZUVANA aún no está disponible. Esta página es solo una lista de espera — hoy no se puede enviar dinero. Las funciones, comisiones, países y fechas son planes y pueden cambiar, y dependen de aprobaciones regulatorias y acuerdos con socios."}};
-const EN={ok:"Thanks! You're on the list. We'll text or email you when we open.",okm:"Your email app opened. Tap Send to join the list.",e1:"Please enter your phone or email.",e3:"Sorry, we couldn't send that. Please try again or email hello@zuvana.app.",e2:"Please check it: enter a valid email or a phone number with at least 10 digits."};
-document.querySelectorAll("[data-i]").forEach(e=>EN[e.dataset.i]=e.textContent);document.querySelectorAll("[data-ia]").forEach(e=>EN[e.dataset.ia]=e.getAttribute("aria-label"));EN.ph=document.getElementById("contact").placeholder;EN.title=document.title;T.en=EN;
+abk:"Nosotros",abh:"Creado en California por BlockPay LLC.",ab1:"Zuvana es un proyecto de BlockPay LLC, una empresa de California. Lo estamos creando porque enviar dinero a la familia debería ser tan fácil como mandar un mensaje, con una comisión que ves desde el principio.",ab2:"Todavía no estamos disponibles. Las funciones, comisiones, países y fechas son planes y pueden cambiar, y dependen de aprobaciones regulatorias y acuerdos con socios.",ab3:"¿Preguntas o comentarios? Escríbenos:",abc:"Un proyecto de BlockPay LLC",d1:"Empresa",d2:"Ubicación",d2v:"California, EE. UU.",d3:"Estado",d3v:"Muy pronto — lista de espera abierta",d4:"Contacto",
+bandh:"Sé de los primeros en saber cuándo lanzamos.",bandp:"Únete a la lista de espera con tu teléfono o correo. Es gratis y solo te contactaremos sobre el lanzamiento.",bandcta:"Unirme a la lista",bandg:"Lee nuestras guías",
+ftag:"Envía dinero a casa con un mensaje. Muy pronto de EE. UU. a México.",fc1:"Producto",fc2:"Empresa",fc3:"Legal",guides:"Guías",fpriv:"Privacidad",fterms:"Términos",disc:"ZUVANA aún no está disponible. Esta página es solo una lista de espera — hoy no se puede enviar dinero. Las funciones, comisiones, países y fechas son planes y pueden cambiar, y dependen de aprobaciones regulatorias y acuerdos con socios.",mcta:"Unirme a la lista"}};
+const EN={ok:"Thanks! You're on the list. We'll text or email you when we open.",okm:"Your email app opened. Tap Send to join the list.",e1:"Please enter your phone or email.",e3:"Sorry, we couldn't send that. Please try again or email hello@zuvana.app.",e2:"Please check it: enter a valid email or a phone number with at least 10 digits.",cinv:"Enter an amount to see the planned total."};
+document.querySelectorAll("[data-i]").forEach(e=>EN[e.dataset.i]=e.textContent);document.querySelectorAll("[data-ia]").forEach(e=>EN[e.dataset.ia]=e.getAttribute("aria-label"));document.querySelectorAll("[data-alt]").forEach(e=>EN[e.dataset.alt]=e.alt);EN.ph=document.getElementById("contact").placeholder;EN.title=document.title;T.en=EN;
 let lang="en";
 function setLang(l){lang=l;document.documentElement.lang=l;const d=T[l];
  document.querySelectorAll("[data-i]").forEach(e=>{if(d[e.dataset.i])e.textContent=d[e.dataset.i]});
  document.querySelectorAll("[data-ia]").forEach(e=>{if(d[e.dataset.ia])e.setAttribute("aria-label",d[e.dataset.ia])});
- document.title=d.title;document.getElementById("contact").placeholder=d.ph;const er=document.getElementById("err");if(er&&er.dataset.k)er.textContent=d[er.dataset.k];const o=document.getElementById("ok");if(o&&o.dataset.k)o.textContent=d[o.dataset.k];
+ document.querySelectorAll("[data-alt]").forEach(e=>{if(d[e.dataset.alt])e.alt=d[e.dataset.alt]});
+ document.title=d.title;document.getElementById("contact").placeholder=d.ph;
+ ["err","ok","chint"].forEach(id=>{const x=document.getElementById(id);if(x&&x.dataset.k)x.textContent=d[x.dataset.k]});
  document.querySelectorAll(".toggle button").forEach(b=>b.setAttribute("aria-pressed",b.dataset.set===l));
  try{localStorage.setItem("zl",l)}catch(e){}}
 document.querySelectorAll(".toggle button").forEach(b=>b.onclick=()=>setLang(b.dataset.set));
 let saved=null;try{saved=localStorage.getItem("zl")}catch(e){}
 setLang(saved||((navigator.language||"").startsWith("es")?"es":"en"));
 
+const RM=matchMedia("(prefers-reduced-motion: reduce)").matches,HAS_IO="IntersectionObserver" in window;
 /* Header border on scroll */
 const hd=document.querySelector(".site-header");const onS=()=>hd.classList.toggle("scrolled",scrollY>8);addEventListener("scroll",onS,{passive:true});onS();
+
+/* Scroll-in reveal */
+const rv=document.querySelectorAll(".reveal");
+if(RM||!HAS_IO)rv.forEach(e=>e.classList.add("in"));
+else{const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add("in");io.unobserve(en.target)}}),{rootMargin:"0px 0px -8% 0px",threshold:.08});
+ rv.forEach((e,i)=>{e.style.transitionDelay=(e.matches(".feat,.step")?(Array.from(e.parentNode.children).indexOf(e)%3)*90:0)+"ms";io.observe(e)})}
+
+/* Animated chat preview */
+(function(){const st=document.getElementById("stage");if(!st)return;
+ const q=s=>st.querySelector(s),bs=st.querySelectorAll(".bub");
+ const all=()=>{bs.forEach(b=>b.classList.add("show"));st.querySelectorAll(".float").forEach(f=>f.classList.add("show"))};
+ if(RM||!HAS_IO){all();return}
+ const seq=[[350,()=>bs[0].classList.add("show")],[900,()=>q("#ty1").classList.add("show")],[2000,()=>{q("#ty1").classList.remove("show");bs[1].classList.add("show")}],[2600,()=>q(".float-fee").classList.add("show")],[3300,()=>bs[2].classList.add("show")],[3800,()=>q("#ty2").classList.add("show")],[4800,()=>{q("#ty2").classList.remove("show");bs[3].classList.add("show")}],[5500,()=>q(".float-received").classList.add("show")]];
+ const io=new IntersectionObserver(es=>{if(es[0].isIntersecting){io.disconnect();seq.forEach(([t,f])=>setTimeout(f,t))}},{threshold:.3});io.observe(st)})();
+
+/* Smooth FAQ accordion */
+document.querySelectorAll(".faq details").forEach(d=>{const s=d.querySelector("summary"),a=d.querySelector(".ans");
+ s.addEventListener("click",ev=>{if(RM||!a.animate)return;ev.preventDefault();
+  if(d.open){const h=a.offsetHeight;const an=a.animate([{height:h+"px",opacity:1},{height:"0px",opacity:0}],{duration:260,easing:"cubic-bezier(.2,.7,.2,1)"});an.onfinish=()=>{d.open=false}}
+  else{d.open=true;const h=a.offsetHeight;a.animate([{height:"0px",opacity:0},{height:h+"px",opacity:1}],{duration:300,easing:"cubic-bezier(.2,.7,.2,1)"})}})});
+
+/* Planned-fee calculator (USD only; no FX shown) */
+(function(){const inp=document.getElementById("amt");if(!inp)return;const FEE=1.99,fmt=new Intl.NumberFormat("en-US",{style:"currency",currency:"USD"});
+ const os=document.getElementById("o-send"),ot=document.getElementById("o-total"),hint=document.getElementById("chint"),chips=document.querySelectorAll(".chip");
+ function calc(){const raw=inp.value.replace(/[$,\s]/g,"");const v=parseFloat(raw);
+  chips.forEach(c=>c.setAttribute("aria-pressed",String(c.dataset.v===raw)));
+  if(!/^\d+(\.\d{0,2})?$/.test(raw)||!(v>0)){os.textContent="—";ot.textContent="—";hint.dataset.k="cinv";hint.textContent=T[lang].cinv;return}
+  hint.dataset.k="";hint.textContent="";os.textContent=fmt.format(v);ot.textContent=fmt.format(Math.round((v+FEE)*100)/100)}
+ inp.addEventListener("input",calc);chips.forEach(c=>c.onclick=()=>{inp.value=c.dataset.v;calc()});calc()})();
+
+/* "Join the waitlist" links: scroll to the form and focus the field */
+const contactEl=document.getElementById("contact");
+document.querySelectorAll('a[href="#wl"]').forEach(a=>a.addEventListener("click",ev=>{ev.preventDefault();document.getElementById("wl").scrollIntoView({behavior:RM?"auto":"smooth",block:"center"});setTimeout(()=>{if(!contactEl.disabled)contactEl.focus({preventScroll:true})},RM?0:450);history.replaceState(null,"","#wl")}));
+
+/* Sticky mobile CTA: visible once the hero form is off-screen */
+(function(){const m=document.getElementById("mcta"),f=document.getElementById("wl");if(!m||!HAS_IO)return;
+ new IntersectionObserver(es=>{const show=!es[0].isIntersecting&&es[0].boundingClientRect.top<0;m.classList.toggle("show",show);m.setAttribute("aria-hidden",String(!show));m.tabIndex=show?0:-1}).observe(f)})();
 
 /* Referral tag: ?ref= (or utm_source) -> hidden "ref" field */
 let REF="";try{const q=new URLSearchParams(location.search);REF=(q.get("ref")||q.get("utm_source")||"").trim().slice(0,40).replace(/[^\w.-]/g,"");
